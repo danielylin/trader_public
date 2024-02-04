@@ -1,0 +1,18 @@
+name: dantrades
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - pandas
+  - ipykernel
+  - pip
+  - pip:
+    - tda-api
+    - mplfinance
+    - yfinance
+    - ta-lib
+    - pytest
