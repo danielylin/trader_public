@@ -6,4 +6,4 @@ Uses trading APIs to automatically generate algorithmic trades.
 
 ## Authors
 
-* **Daniel Lin** - *Initial work*
+* **Daniel Lin** - 
