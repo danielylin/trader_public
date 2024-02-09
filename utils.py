@@ -128,30 +128,5 @@ def get_sp500():
     tickers = [ticker.replace(".", "-") for ticker in tickers]
     return tickers
 
-
-def test_get_data(source: str,
-                  tick: str,
-                  start_date="2021-01-01",
-                  end_date="2022-01-01",
-                  period=None,
-                  client=None):
-    """Test for get_data methods that returns df.
-    """
-    if source == "td":
-        client = get_ameritrade_client()
-    if period is None:
-        df_prices = get_data(
-            tick=tick, time_interval="day", source=source,
-            start_date=start_date, end_date=end_date, client=client)
-        return df_prices
-
-    else:
-        df_prices = get_data(
-            tick=tick, time_interval="day", source=source,
-            period="6mo", client=client)
-        return df_prices
-
 if __name__ == "__main__":
-    print(test_get_data("yf", "DIS", start_date="2019-06-01", end_date="2019-07-01"))
-    # print(test_get_data("td", "DIS", period="6mo"))
-    # test_get_data("yf", "DIS", period="6mo")
+    pass
