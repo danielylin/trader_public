@@ -185,17 +185,17 @@ class BasketTrader(object):
             self.initialize_etl(trader=trade_client)
             self.sql_worker.connect()
             if bool(self.order_book):
-                # self.sql_worker.export_requested_orders(
-                #     "requested_orders",
-                #     self.order_book,
-                #     write_type="append"
-                # )
+                self.sql_worker.export_requested_orders(
+                    "requested_orders",
+                    self.order_book,
+                    write_type="append"
+                )
 
-                # self.sql_worker.export_filled_orders(
-                #     "filled_orders",
-                #     datetime.combine(date.today(), datetime.min.time()),
-                #     write_type="append"
-                # )
+                self.sql_worker.export_filled_orders(
+                    "filled_orders",
+                    datetime.combine(date.today(), datetime.min.time()),
+                    write_type="append"
+                )
                 if trade_client is not None:
                     self.sql_worker.export_positions(
                         "positions",
